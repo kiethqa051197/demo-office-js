@@ -21,11 +21,53 @@
 </head>
 
 <body>
-    <p>This add-in will insert the text 'Hello world!' in a new message.</p>
-    <button id="helloButton">Say hello</button>
+    <div class="clsSwitch">
+        <!-- Rounded switch -->
+        <label id="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <p>Add signature</p>
+        <p id="strONOFF">OFF</p>
+    </div>
 
-    <!-- The following image URL tracks diagnostic data for this sample add-in. Please remove the image tag if you reuse this sample in your own code project. -->
-    <img src="https://pnptelemetry.azurewebsites.net/pnp-officeaddins/samples/outlook-add-in-hello-world-run" />
+    <div class="container" id="id_container">
+        <h2>Add signature data</h2>
+    
+        <input type="text" id="display_name" placeholder="Name*" required />
+    
+        <input type="email" id="email_id" placeholder="Email address*" required />
+    
+        <input type="text" id="job_title" placeholder="Title" />
+    
+        <input type="text" id="phone_number" placeholder="Phone number" />
+    
+        <input type="text" placeholder="Eg: Thank you," id="greeting_text" />
+    
+        <button id="btnInsert">Insert signature</button>
+    
+        <button id="btnReset">Reset</button>
+    </div>
+
+    <hr/>
+
+    <div class="container" id="id_container2">
+        <h2>Get data from API</h2>
+    
+        <input type="text" id="full_name"  placeholder="Full name" />
+    
+        <input type="text" id="dateofbirth" placeholder="Date of birth" />
+    
+        <input type="text" id="gender" placeholder="Gender"  />
+    
+        <input type="text" id="phone" placeholder="Phone number" />
+    
+        <img id="avatar"/>
+
+    </div>
+
+    <button id="btnCallAPI">Get data from API</button>
+
 </body>
 
 </html>
